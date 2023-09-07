@@ -1,5 +1,5 @@
 body {
-    background: rgb(0, 0, 0);
+    background-image:url(https://media.tenor.com/PSstQlf2RmQAAAAC/background-black.gif);
     color: rgb(36, 32, 32);
     padding: 10px;
     font-family: mono;
@@ -53,14 +53,14 @@ main {
     flex: 1;
     padding: 15px;
 }
-
 /* portfolio styles */
 #interests {
-    border: 4px silver ridge;
+    font-size: large;
     padding: 8px;
 }
 h2, h3 {
     margin: 0px;
+    margin-top: 20px;
 }
 /* portfolio styles */
 .content h1 {
@@ -73,14 +73,14 @@ h2, h3 {
 }
 
 #portfolio li {
-    background: #fff;
+    background: #ffffff;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 #portfolio li:hover {
-    background: #eee;
+    background: #f0f0f0;
 }
 
 #portfolio a {
