@@ -46,6 +46,11 @@ $(function () {
 
 
 
+    createPlatform(100, 600, 200, 10);
+    createPlatform(300, 500, 150, 10);
+    createPlatform(500, 400, 200, 10);
+    createPlatform(700, 300, 150, 10);
+    createPlatform(900, 200, 200, 10);
     
     // TODO 2
     // Create collectables
@@ -55,6 +60,9 @@ $(function () {
 
 
 
+    createCollectable("grace", 200, 400, 0.2, 0.5);
+    createCollectable("steve", 500, 300, 0.1);
+    createCollectable("kennedi", 1000, 100);   
 
     // TODO 3
     // Create cannons
@@ -64,6 +72,11 @@ $(function () {
 
 
 
+    createCannon("left", 200, 2000);
+    createCannon("top", 300, 1500);
+    createCannon("bottom",800, 1500)
+    createCannon("right", 400, 3000);
+    createCannon("right", 600, 3000)
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////

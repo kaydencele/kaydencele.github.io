@@ -14,7 +14,7 @@ nav {
     background: rgb(0, 93, 136);
    margin: 0 auto;
    margin-bottom: 20px;
-   border-radius: 30px;
+   border-radius: 80px;
     display: flex;
     padding: 10px;
 }
@@ -23,14 +23,16 @@ h1 {
     align-items: center;
     color: rgb(168, 201, 234);
     flex: 1;
-    margin: 0;
+    margin: 20px;
 }
 #nav-ul {
     list-style-image: none;
 }
 .nav-li {
     display: inline-block;
-    padding: 0 10px;
+    font-size: larger;
+    padding: 10px;
+    margin-right: 40px;
 }
 a {
     text-decoration: none;
@@ -61,6 +63,10 @@ main {
 h2, h3 {
     margin: 0px;
     margin-top: 20px;
+
+}
+.interests {
+  list-style-image: url();
 }
 /* portfolio styles */
 .content h1 {
