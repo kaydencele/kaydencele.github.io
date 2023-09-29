@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-image: url("https://wallpaperaccess.com/full/6711503.jpg");
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -48,8 +48,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY)
 			}
 
 			// changes the text displayed on the Box
@@ -63,6 +64,12 @@
 			
 			// TODO 2 - Variable declarations 
 			
+			var positionX = 0;
+			var points = 0;
+			var speed = 10;
+			var positionY = 0;
+			var speedY = 10;
+			var boardHeight = jQuery(window).height(); 
 
 			
 			/* 
@@ -71,8 +78,22 @@
 			turn it around! 
 			*/
 			function update() {
-				
+				positionX += speed;
+				positionY += speedY
+				moveBoxTo(positionX, positionY);
+				if (positionX >= boardWidth) {
+					positionX -= speed
+					speed = -speed
+				}; if (positionX < 0){
+					speed = speed * -1
+				}; if (positionY > boardHeight) {
+				speedY = speedY * -1
+				}; if (positionY < 0) {
+					positionY -= speedY;
+					speedY = -speedY
+				}
 
+ 
 			};
 
 			/* 
@@ -81,7 +102,15 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+				positionX = 0;
+				points += 1;
+				changeBoxText (points);
+				if (speed > 0) {
+					speed += 3
+				}
+				else if (speed < 0) {
+					speed -= 3
+				}
 
 
 			};
